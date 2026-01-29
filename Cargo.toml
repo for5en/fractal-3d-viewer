@@ -1,0 +1,26 @@
+[package]
+name = "fractal_3d_viever"
+version = "1.0.0"
+edition = "2024"
+
+# --- Author / Project metadata ---
+author = "Igor Rostkowski"
+description = "3D fractal generator and viewer"
+license = "MIT"
+repository = "not uploaded yet"
+readme = "readme.md"
+keywords = ["fractal", "3d", "graphics", "raymarching"]
+categories = ["graphics", "visualization"]
+
+[dependencies]
+bytemuck = { version = "1.12", features = ["derive"] }
+env_logger = "0.10"
+error-iter = "0.4"
+log = "0.4"
+pixels = "0.15"
+pollster = "0.4.0"
+winit = "0.29"
+winit_input_helper = "0.15"
+
+egui = "0.23"
+egui_winit_platform = "0.23"
