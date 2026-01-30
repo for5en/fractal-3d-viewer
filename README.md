@@ -2,7 +2,27 @@
 
 Interactive 3D fractal viewer with full control over camera movement, fractal parameters, and animations.
 
----
+## Features
+- Real-time 3D fractal rendering
+- Camera rotation and zoom
+- Adjustable fractal parameters
+- Keyboard and mouse controls
+
+## How to build & run
+1. Make sure you have Rust installed: https://www.rust-lang.org/tools/install
+2. Clone the repository:
+   ```bash
+   git clone https://github.com/for5en/fractal_3d_viewer.git
+   cd fractal_3d_viewer
+   ```
+3. Build the project:
+   ```bash
+   cargo build --release
+   ```
+4. Run the viewer:
+   ```bash
+   cargo run --release
+   ```
 
 ## Movement
 
@@ -16,7 +36,6 @@ Interactive 3D fractal viewer with full control over camera movement, fractal pa
 | **Left Ctrl** | Move down |
 | **Shift** | Sprint *(toggle)* |
 
----
 
 ## Special Commands
 
@@ -30,8 +49,6 @@ Interactive 3D fractal viewer with full control over camera movement, fractal pa
 | **Tab** | Change mouse mode (free / locked) |
 | **Backspace** | Reset |
 
----
-
 ## Option Commands
 
 ### Value Control
@@ -41,7 +58,6 @@ Interactive 3D fractal viewer with full control over camera movement, fractal pa
 | **Numpad +** | Increase value |
 | **Numpad −** | Decrease value |
 
----
 
 ### Camera Settings
 
@@ -51,7 +67,6 @@ Interactive 3D fractal viewer with full control over camera movement, fractal pa
 | **J** | Mouse sensitivity |
 | **F** | Field of view (FOV) |
 
----
 
 ### Fractal Settings
 
@@ -67,7 +82,6 @@ Interactive 3D fractal viewer with full control over camera movement, fractal pa
 | **3** | Constant Z value |
 | **4** | Constant W value |
 
----
 
 ## Camera Animation
 
@@ -75,7 +89,6 @@ Interactive 3D fractal viewer with full control over camera movement, fractal pa
 |-----|--------|
 | **W / A / S / D / Space / Ctrl** | Change trajectory |
 
----
 
 ## Fractal Animation
 
