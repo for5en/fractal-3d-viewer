@@ -2,6 +2,8 @@
 
 Interactive 3D fractal viewer with full control over camera movement, fractal parameters, and animations.
 
+![Fractal Animation Gif](assets/juliabulb.gif)
+
 ## Features
 - Real-time 3D fractal rendering
 - Camera rotation and zoom

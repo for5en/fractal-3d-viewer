@@ -1,5 +1,6 @@
 #![deny(clippy::all)]
 #![forbid(unsafe_code)]
+#[cfg(not(target_os = "windows"))]
 
 use std::process::Command;
 use std::time::Instant;
@@ -192,15 +193,18 @@ fn cross(a: [f32; 3], b: [f32; 3]) -> [f32; 3] {
 }
 
 fn main() -> Result<(), Error> {
-    let status = Command::new("xinput")
-        .arg("set-prop")
-        .arg("12")
-        .arg("libinput Disable While Typing Enabled")
-        .arg("0")
-        .status()
-        .expect("Nie udało się uruchomić xinput");
+    #[cfg(not(target_os = "windows"))]
+    {
+        let status = Command::new("xinput")
+            .arg("set-prop")
+            .arg("12")
+            .arg("libinput Disable While Typing Enabled")
+            .arg("0")
+            .status()
+            .expect("Nie udało się uruchomić xinput");
 
-    println!("Status zmiany ustawien touchpada: {}", status);
+        println!("Touchpad settings change status: {}", status);
+    }
 
     env_logger::init();
     let event_loop = EventLoop::new().unwrap();
